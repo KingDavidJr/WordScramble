@@ -61,8 +61,11 @@ struct ContentView: View {
                 }
                 
                 ToolbarItem(placement: .topBarTrailing) {
-                    Text("Words Found: \(wordsCount)")
-                        .bold()
+                    HStack {
+                        Text("Words Found: \(wordsCount)")
+                            .bold()
+                            .foregroundStyle(.blue)
+                    }
                 }
                 
                 ToolbarItem(placement: .topBarLeading) {
