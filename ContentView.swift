@@ -135,11 +135,14 @@ struct ContentView: View {
                 
                 let allWords = startWords.components(separatedBy: .newlines)
                 
-                rootWord = allWords.randomElement() ?? "silkworm"
-                inputWord = ""
-                score = 0
-                wordsCount = 0
-                usedWords = []
+                withAnimation {
+                    rootWord = allWords.randomElement() ?? "silkworm"
+                    inputWord = ""
+                    score = 0
+                    wordsCount = 0
+                    usedWords = []
+                }
+                
                 return
             }
             
